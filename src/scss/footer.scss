@@ -1,0 +1,138 @@
+@import 'font';
+
+.footerPerso {
+  background-color: black;
+  
+  &__articles {
+    @include large {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  &__title {
+    color: white;
+    font-size: 22px;
+    font-family: 'Abel';
+    text-align: center;
+    padding-top: 24px;
+
+    @include large {
+      grid-column: 1 / span 3;
+      grid-row: 1 / 1;
+    }
+  }
+  &__titleArticle {
+    color: white;
+    font-family: 'Abel';
+    padding: 16px;
+    font-size: 20px;
+
+  }
+  &__textArticle {
+    color: white;
+    font-family: 'Abel';
+    text-align: center;
+    line-height: 18px;
+    font-size: 18px;
+  }
+  &__socialMedia {
+    background-color: white;
+  }
+  &__article1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+
+    @include large {
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+    } 
+  }
+  &__article2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+
+    @include large {
+      grid-column: 2 / 2;
+      grid-row: 2 / 2;
+    } 
+  }
+  &__article3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+
+    @include large {
+      grid-column: 3 / 3;
+      grid-row: 2 / 2;
+    } 
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+
+    @include large {
+      grid-column: 1 / span 2;
+      grid-row: 2 / 2;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+  &__label {
+    color: white;
+    font-family: 'Abel';
+    padding: 16px;
+    font-size: 18px;
+  }
+  &__submit {
+    padding: 4px;
+    margin-top: 16px;
+    font-family: 'Abel';
+    font-weight: bold;
+    font-size: 18px;
+    background-color: black;
+    border-color: black;
+    color: white;
+
+    @include large {
+      margin-left: 24px;
+    }
+    
+  }
+  &__input[name=email] {
+    padding: 8px 40px 8px 12px;
+    background-color: black;
+    border-style: none none solid none;
+    border-color: white;
+    color: white;
+
+    @include large {
+      margin-left: 40px;
+    }
+    
+  }
+  &__socialMedia {
+    padding: 16px;
+    display: flex;
+    justify-content: space-evenly;
+
+    svg {
+      @include large {
+        padding: 24px;
+      }
+    }
+
+    @include large {
+      justify-content: center;
+    }
+    
+  }
+}

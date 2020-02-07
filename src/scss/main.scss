@@ -1,0 +1,152 @@
+@import 'footer';
+@import "font";
+
+.title1 {
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    font-family: "Ailerons";
+    padding: 20px;
+    margin-bottom: 50px;
+    font-size: 26px;
+  }
+}
+
+.homeTop {
+  &__presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Abel;
+  }
+  &__madeinText {
+    font-size: 32px;
+    padding: 16px;
+    font-weight: bold;
+  }
+  &__presentationText {
+    text-align: center;
+    font-size: 32px;
+    line-height: 32px;
+    color: #3e3e3e;
+  }
+  &__bg {
+    display: flex;
+    justify-content: center;
+  }
+  &__model {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.homeTop__kr.visible {
+  visibility: visible;
+  position: static;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.homeTop__fr.visible {
+  visibility: visible;
+  position: static;
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+
+}
+
+.homeTop__it.visible {
+  visibility: visible;
+  position: static;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.homeBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__custom {
+    display: flex;
+    justify-content: center;
+    font-family: Abel;
+    padding: 8px 40px 32px 40px;
+  }
+  &__customText {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  &__models {
+    display: flex;
+    justify-content: space-around;
+    font-family: Abel;
+    font-size: 22px;
+    padding: 28px;
+    cursor: pointer;
+
+    @include large {
+      transform: translateY(200px);
+    }
+  }
+
+}
+.article {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include large {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__img {
+  margin-top: 120px;
+  width: 40vh;
+
+    @include large {
+    width: 70vh;
+    }
+  }
+
+  &__text {
+    color: white;
+    font-family: Abel;
+    text-align: center;
+    line-height: 28px;
+    font-size: 22px;
+    margin: 60px 40px 40px 40px;
+
+    @include large {
+      font-size: 36px;
+      line-height: 64px;
+    }
+  }
+}
+
+.article--2 {
+  background-color: white;
+  display: flex;
+
+  &__img--textile {
+    order : -1;
+  }
+  
+  p {
+    color: black;
+  }
+}
+
+.underline {
+  border-bottom: solid 1px black;
+
+}
+

@@ -1,0 +1,353 @@
+@import 'footer';
+@import 'font';
+ 
+.title {
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    font-size: 26px; 
+    padding: 20px;
+    font-family: 'Ailerons';
+    text-decoration: none;
+    color: black;
+
+    @include medium {
+      font-size: 28px;
+    }
+    @include large {
+      display: none;
+    }
+  }
+  &__text--desktop {
+    display: none;
+
+    @include large {
+      display: inherit;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+
+  &__model {
+    text-decoration: none;
+    font-family: 'Abel';
+    font-size: 22px;
+    color: black;
+    padding: 16px;
+    cursor: pointer;
+
+    @include medium {
+      font-size: 26px;
+      padding: 48px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.product {
+  display: flex;
+  justify-content: center;
+}
+
+.perspective {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  &__choice {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    margin: 16px;
+
+    @include medium {
+      height: 30px;
+      margin: 24px;
+    }
+  }
+}
+
+.yourBag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    font-size: 18px;
+    font-family: 'Abel';
+    padding-top: 24px;
+
+   @include medium {
+     font-size: 28px;
+   }
+  }
+  &__price {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Abel';
+    padding: 16px;
+
+    @include medium {
+      font-size: 32px;
+    }
+  }
+}
+
+.personnalize {
+  margin-top: 24px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+
+  &__bagPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include large {
+      grid-column: 2 / 2;
+      grid-row: 2 / 2;
+      padding-top: 36px;
+      
+    }
+  }
+  &__bagPart2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+
+    @include large {
+      grid-column: 3 / 3;
+      grid-row: 1 / 1;
+      
+    }
+  }
+  &__materials {
+    height: 50px;
+  }
+  &__img {
+    width: 60px;
+    padding: 0 40px 24px 0;
+
+    @include medium {
+      width: 80px;
+      padding: 0 80px 24px 0;
+    }
+  }
+  &__material1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-image: url(../assets/linen.jpg);
+    margin-right: 16px;
+    position: relative;
+
+    @include medium {
+      margin-right: 24px;
+      width: 60px;
+      height: 60px;
+    }
+
+    &::before {
+      content: "Linen";
+      font-size: 18px;
+      font-family: 'Abel';
+      position: absolute;
+      top: -25px;
+      left: 5px;
+    }
+  }
+  &__material2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-image: url(../assets/black-plastic.jpg);
+    margin-left: 16px;
+    position: relative;
+
+    @include medium {
+      margin-left: 24px;
+      width: 60px;
+      height: 60px;
+    }
+    
+    &::after {
+      content: "Plastic";
+      font-size: 18px;
+      font-family: 'Abel';
+      position: absolute;
+      top: -25px;
+      left: 5px;
+    }
+   
+  }
+  
+}
+
+.personnalize__material1--silk {
+  background-image: url(../assets/silk.jpg);
+}
+
+.personnalize__material1--murshroom {
+  background-image: url(../assets/mushroomleather.png);
+}
+
+.information {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  
+
+  @include medium {
+  margin-bottom: 40px;
+  margin-top: 16px;
+  }
+
+  @include large {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+  }
+  &__text {
+    font-family: 'Abel';
+    font-size: 18px;
+    color: #3e3e3e;
+    line-height: 18px;
+
+    @include medium {
+      font-size: 28px;
+      line-height: 28px;
+      text-align: center;
+    }
+    @include large {
+      text-align : left
+    }
+  }
+}
+
+.preOrder {
+  background-color: white;
+  margin: 20px 40px 40px 40px;
+  
+  @include large {
+    grid-column: 1 / span 3;
+    grid-row: 3 / 3;
+    align-self: center;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  &__input[name=email] {
+    padding: 8px 80px 8px 16px;
+    border-style: none none solid none;
+    border-color: #3e3e3e;
+
+    &::placeholder {
+      font-size: 16px;
+      font-family: 'Abel';
+
+      @include medium {
+        font-size: 26px;
+        overflow: visible;
+      }
+    }
+  }
+  &__label {
+    font-family: 'Abel';
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 16px;
+
+    @include medium {
+      font-size: 28px;
+    }
+  }
+  &__submit {
+    font-size: 18px;
+    font-family: 'Abel';
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-color: black;
+    padding: 8px 12px 8px 12px;
+    margin-top: 16px;
+
+    @include medium {
+      font-size: 28px;
+    }
+  }
+}
+
+.countries {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 170vh;
+
+  @include medium {
+    height: 200vh;
+  }
+
+  @include large {
+    height: 100%;
+  }
+
+  
+
+.france.visible{
+  visibility: visible;
+    position: static;
+    opacity: 1;
+    transform: translateY(0);
+    
+    @include large {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+}
+
+.southKorea.visible{
+  visibility: visible;
+    position: static;
+    opacity: 1;
+    transform: translateY(0);
+
+    @include large {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+}
+
+.italy.visible{
+  visibility: visible;
+    position: static;
+    opacity: 1;
+    transform: translateY(0);
+
+    @include large {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+}
+
+.gridColumn1 {
+  @include large {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+}
+}

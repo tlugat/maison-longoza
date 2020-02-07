@@ -1,0 +1,23 @@
+@mixin medium {
+  @media(min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media(min-width: 1366px) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: "Ailerons";
+  src: url("../assets/Ailerons-Regular.woff2") format("woff2"),
+         url("../assets/Ailerons-Regular.woff") format("woff");
+ }
+
+ @font-face {
+  font-family: "Abel";
+  src: url("../assets/Abel-Regular.woff2") format("woff2"),
+         url("../assets/Abel-Regular.woff") format("woff");
+ }
